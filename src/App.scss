@@ -1,0 +1,180 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Segoe UI";
+}
+body{
+  padding: 15px;
+}
+
+h1{
+  font-size: 22px;
+}
+hr{
+  height: 2px;
+  background-color: gray;
+  border: none;
+}
+
+input[type="text"], input[type="button"]{
+  font-size: 18px;
+  padding: 5px 10px;
+  margin: 0px 5px;
+  border-radius: 10px;
+  border:solid gray 1px;
+}
+
+input[type="text"]{
+  width: 30%;
+}
+
+input[type="button"]{
+  cursor: pointer;
+  background-color: dimgray;
+  transition: background-color 0.3s;
+  color: white;
+  &:hover{
+    background-color: darkgray;
+  }
+}
+
+
+.teams{
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  &__team{
+    background-color: gray;
+    padding: 5px 10px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+    &__remove{
+      width: 20px;
+      height: 20px;
+      display: grid;
+      cursor: pointer;
+      border-radius: 50%;
+      user-select: none;
+      transition: background-color 0.3s;
+      label{
+        position: relative;
+        top: -2px;
+        place-self: center;
+        cursor: pointer;
+      }
+      &:hover{
+        background-color: ghostwhite;
+      }
+    }
+    &__name{
+      color: white;
+    }
+  }
+}
+
+.groups{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  row-gap: 20px;
+  &__group{
+    border: solid 1px gray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    place-self: center;
+    align-items: center;
+    width: 80%;
+    padding: 10px 0px;
+    &__name{
+      font-weight: 700;
+    }
+    &__teamName{
+      background-color: gray;
+      color: white;
+      font-size: 20px;
+      width: 100%;
+      text-align: center;
+      padding: 5px 10px;
+      border-radius: 10px;
+      user-select: none;
+      cursor: grab;
+      &:active{
+        cursor: grabbing;
+      }
+      &:hover{
+        background-color: darkgrey;
+      }
+    }
+    &__dropZone{
+      width: 80%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.matches{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 20px;
+  &__group{
+    border: solid 1px gray;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    place-self: center;
+    align-items: center;
+    width: 80%;
+    padding: 10px 0px;
+    &__match{
+      display: grid;
+      grid-template-columns: 5fr 1fr 5fr;
+      align-items: center;
+      width: 90%;
+      justify-content: center;
+      place-items: center;
+    }
+    &__name{
+      font-weight: 700;
+    }
+    &__teamName{
+      background-color: gray;
+      color: white;
+      font-size: 20px;
+      width: 100%;
+      text-align: center;
+      padding: 5px 10px;
+      border-radius: 10px;
+    }
+  }
+}
+
+.criteria{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 30%;
+  row-gap: 5px;
+  input[type="number"]{
+    width: 50px;
+  }
+}
+
+.day__matches{
+  border: solid gray 2px;
+  padding: 15px;
+  border-radius: 10px;
+  display: grid;
+  margin: 5px 0px;
+  &__match{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    place-items: center;
+    width: 100%;
+  }
+}
